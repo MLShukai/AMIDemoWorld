@@ -25,6 +25,7 @@ BOOTHで無料配布されているアセットの入手および導入の方法
 
 - QvPen: BOOTHからダウンロードし、Unity Packageをドラッグアンドドロップしてください。<https://booth.pm/ja/items/1555789>
 - iwaSync: BOOTHからダウンロードし、`iwaSync3_v*.*.*(U#1.0).unitypackage`をドラッグアンドドロップしてください。<https://booth.pm/ja/items/2666275>
+- UnaSlides: Boothからダウンロードし、Unity Packageをドラッグアンドドロップしてください。<https://booth.pm/ja/items/4141632>
 
 ## ルール
 
