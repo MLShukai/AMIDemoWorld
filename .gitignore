@@ -72,3 +72,11 @@ Packages/com.vrchat.vrcsdk3
 
 # Visual Studio Code
 .vscode
+
+# Proprietary assets
+[Aa]ssets/QvPen
+[Aa]ssets/QvPen.meta
+[Aa]ssets/HoshinoLabs
+[Aa]ssets/HoshinoLabs.meta
+[Aa]ssets/UnaSlides
+[Aa]ssets/UnaSlides.meta
