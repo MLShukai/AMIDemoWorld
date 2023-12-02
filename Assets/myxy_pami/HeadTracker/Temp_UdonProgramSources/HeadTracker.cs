@@ -48,7 +48,7 @@ public class HeadTracker : UdonSharpBehaviour
         {
             _targetPlayer = null;
         }
-        var allPlayers = new VRCPlayerApi[32];
+        var allPlayers = new VRCPlayerApi[50];
         VRCPlayerApi.GetPlayers(allPlayers);
         foreach (var existPlayer in allPlayers)
         {
