@@ -14,7 +14,7 @@ public class HeadTracker : UdonSharpBehaviour
     [SerializeField]
     private string[] _targetPlayerDisplayNameList;
 
-    private VRCPlayerApi _targetPlayer;
+    private VRCPlayerApi _targetPlayer = null;
 
     private void Start()
     {
@@ -28,10 +28,13 @@ public class HeadTracker : UdonSharpBehaviour
 
     private void Update()
     {
-        var headPosition = _targetPlayer.GetBonePosition(HumanBodyBones.Head);
-        var headRotation = _targetPlayer.GetBoneRotation(HumanBodyBones.Head);
-        this.transform.position = headPosition;
-        this.transform.rotation = headRotation;
+        if (_targetPlayer != null)
+        {
+            var headPosition = _targetPlayer.GetBonePosition(HumanBodyBones.Head);
+            var headRotation = _targetPlayer.GetBoneRotation(HumanBodyBones.Head);
+            this.transform.position = headPosition;
+            this.transform.rotation = headRotation;
+        }
     }
 
     public override void OnPlayerJoined(VRCPlayerApi player)
@@ -39,15 +42,37 @@ public class HeadTracker : UdonSharpBehaviour
         TrySetTargetPlayer(player);
     }
 
-    private void TrySetTargetPlayer(VRCPlayerApi player)
+    public override void OnPlayerLeft(VRCPlayerApi player)
+    {
+        if (_targetPlayer == player)
+        {
+            _targetPlayer = null;
+        }
+        var allPlayers = new VRCPlayerApi[32];
+        VRCPlayerApi.GetPlayers(allPlayers);
+        foreach (var existPlayer in allPlayers)
+        {
+            if (existPlayer == null)
+            {
+                continue;
+            }
+            if (TrySetTargetPlayer(existPlayer))
+            {
+                break;
+            }
+        }
+    }
+
+    private bool TrySetTargetPlayer(VRCPlayerApi player)
     {
         foreach (var targetPlayerDisplayName in _targetPlayerDisplayNameList)
         {
             if (player.displayName == targetPlayerDisplayName)
             {
                 _targetPlayer = player;
-                break;
+                return true;
             }
         }
+        return false;
     }
 }
