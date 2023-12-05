@@ -6401,7 +6401,7 @@ PrefabInstance:
     - target: {fileID: 633905740555316807, guid: b09260b8ea260e648846a40ad31b254c,
         type: 3}
       propertyPath: _targetPlayerDisplayNameList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 633905740555316807, guid: b09260b8ea260e648846a40ad31b254c,
         type: 3}
@@ -6416,7 +6416,7 @@ PrefabInstance:
     - target: {fileID: 633905740555316807, guid: b09260b8ea260e648846a40ad31b254c,
         type: 3}
       propertyPath: _targetPlayerDisplayNameList.Array.data[2]
-      value: myxy
+      value: MLShukaiAMI1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b09260b8ea260e648846a40ad31b254c, type: 3}
