@@ -21,11 +21,12 @@
 
 ### 外部依存関係
 
-BOOTHで無料配布されているアセットの入手および導入の方法を記述します。再配布を禁止しているアセットが大半占めるためです。
+BOOTHやUnity Asset Storeで無料配布されているアセットの入手および導入の方法を記述します。再配布を禁止しているアセットが大半占めるためです。
 
 - QvPen: BOOTHからダウンロードし、Unity Packageをドラッグアンドドロップしてください。<https://booth.pm/ja/items/1555789>
 - iwaSync: BOOTHからダウンロードし、`iwaSync3_v*.*.*(U#1.0).unitypackage`をドラッグアンドドロップしてください。<https://booth.pm/ja/items/2666275>
 - UnaSlides: Boothからダウンロードし、Unity Packageをドラッグアンドドロップしてください。<https://booth.pm/ja/items/4141632>
+- Skybox Series Free: Unity Asset Storeからプロジェクトに追加してください。<https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633>
 
 ## ルール
 
